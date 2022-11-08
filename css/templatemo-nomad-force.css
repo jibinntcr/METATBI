@@ -747,3 +747,8 @@ strong {
   text-align: justify;
   text-justify: inter-word;
 }
+
+.logo-size {
+  max-width: auto;
+  height: 90px;
+}
