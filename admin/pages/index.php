@@ -285,7 +285,10 @@ if (strlen($_SESSION['alogin']) == 0) {
                         $heading =  substr($result->heading, 0, 65);
                       ?>
                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong> <?php echo  $heading ?></strong></td>
-                        <td> <?php echo  $result->date ?></td>
+                        <?php
+                        $date = date_create($result->date);
+                        ?>
+                        <td> <?php echo date_format($date, "d/m/Y"); ?></td>
                         <?php
                         $cat = $result->category;
                         if ($cat == 'News') { ?>

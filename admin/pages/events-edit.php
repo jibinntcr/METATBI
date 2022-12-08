@@ -3,71 +3,71 @@ session_start();
 error_reporting(0);
 include('../includes/config.php');
 if (strlen($_SESSION['alogin']) == 0) {
-    header('location:login.php');
+  header('location:login.php');
 } else {
-    if (isset($_POST['EditNaEBTN'])) {
-        if (($_FILES["image"]["error"]) == '0') { //with image     
-            if ($_POST['landingPageCheck'] == 'on') {
-                $homePageShow = '1';
-            } else {
-                $homePageShow = '0';
-            }
+  if (isset($_POST['EditNaEBTN'])) {
+    if (($_FILES["image"]["error"]) == '0') { //with image     
+      if ($_POST['landingPageCheck'] == 'on') {
+        $homePageShow = '1';
+      } else {
+        $homePageShow = '0';
+      }
 
 
-            $id = $_POST['id'];
-            // $image = $_POST['OldImage'];
+      $id = $_POST['id'];
+      // $image = $_POST['OldImage'];
 
-            $title = $_POST['title'];
-            $date = $_POST['date'];
-            $content = $_POST['content'];
-            $category = $_POST['category'];
+      $title = $_POST['title'];
+      $date = $_POST['date'];
+      $content = $_POST['content'];
+      $category = $_POST['category'];
 
-            $folder = '../uploads/';
+      $folder = '../uploads/';
 
-            $file = $folder . basename($_FILES["image"]["name"]);
-            move_uploaded_file($_FILES['image']['tmp_name'], $file);
-            $image = basename($_FILES["image"]["name"]);
+      $file = $folder . basename($_FILES["image"]["name"]);
+      move_uploaded_file($_FILES['image']['tmp_name'], $file);
+      $image = basename($_FILES["image"]["name"]);
 
-            $sql = "UPDATE  news SET heading='$title',content='$content',date='$date',image='$blogimage',image='$image', category='$category',landingStatus='$homePageShow' where id='$id'";
+      $sql = "UPDATE  news SET heading='$title',content='$content',date='$date',image='$blogimage',image='$image', category='$category',landingStatus='$homePageShow' where id='$id'";
 
-            $query = $dbh->prepare($sql);
-            $result = $query->execute();
-            if ($query->rowCount() > 0) {
-                $_SESSION["eventedited"] = "success";
-                echo '<script>window.location = "index.php";</script>';
-            } else {
-                $_SESSION["eventedited"] = "notsuccess";
-                echo '<script>window.location = "index.php";</script>';
-            }
-        } else if (($_FILES["image"]["error"]) == '4') { // without image
-            if ($_POST['landingPageCheck'] == 'on') {
-                $homePageShow = '1';
-            } else {
-                $homePageShow = '0';
-            }
+      $query = $dbh->prepare($sql);
+      $result = $query->execute();
+      if ($query->rowCount() > 0) {
+        $_SESSION["eventedited"] = "success";
+        echo '<script>window.location = "index.php";</script>';
+      } else {
+        $_SESSION["eventedited"] = "notsuccess";
+        echo '<script>window.location = "index.php";</script>';
+      }
+    } else if (($_FILES["image"]["error"]) == '4') { // without image
+      if ($_POST['landingPageCheck'] == 'on') {
+        $homePageShow = '1';
+      } else {
+        $homePageShow = '0';
+      }
 
 
-            $id = $_POST['id'];
-            $image = $_POST['OldImage'];
+      $id = $_POST['id'];
+      $image = $_POST['OldImage'];
 
-            $title = $_POST['title'];
-            $date = $_POST['date'];
-            $content = $_POST['content'];
-            $category = $_POST['category'];
+      $title = $_POST['title'];
+      $date = $_POST['date'];
+      $content = $_POST['content'];
+      $category = $_POST['category'];
 
-            $sql = "UPDATE  news SET heading='$title',content='$content',date='$date',image='$image', category='$category',landingStatus='$homePageShow' where id='$id'";
+      $sql = "UPDATE  news SET heading='$title',content='$content',date='$date',image='$image', category='$category',landingStatus='$homePageShow' where id='$id'";
 
-            $query = $dbh->prepare($sql);
-            $result = $query->execute();
-            if ($query->rowCount() > 0) {
-                $_SESSION["eventedited"] = "success";
-                echo '<script>window.location = "index.php";</script>';
-            } else {
-                $_SESSION["eventedited"] = "notsuccess";
-                echo '<script>window.location = "index.php";</script>';
-            }
-        }
+      $query = $dbh->prepare($sql);
+      $result = $query->execute();
+      if ($query->rowCount() > 0) {
+        $_SESSION["eventedited"] = "success";
+        echo '<script>window.location = "index.php";</script>';
+      } else {
+        $_SESSION["eventedited"] = "notsuccess";
+        echo '<script>window.location = "index.php";</script>';
+      }
     }
+  }
 
 ?>
 
@@ -249,33 +249,33 @@ if (strlen($_SESSION['alogin']) == 0) {
                                 ?>
 
                         <div class="mb-3">
-                        <input type="hidden" id="id" name="id" value="<?php echo htmlentities($userArr[0]->id); ?>" />
-                        <input type="hidden" id="OldImage" name="OldImage" value="<?php echo htmlentities($userArr[0]->image); ?>" />
+                        <input type="hidden" id="id" name="id" value="<?php echo ($userArr[0]->id); ?>" />
+                        <input type="hidden" id="OldImage" name="OldImage" value="<?php echo ($userArr[0]->image); ?>" />
                           <label class="form-label" for="basic-default-fullname">Title</label>
-                          <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="<?php echo htmlentities($userArr[0]->heading); ?>">
+                          <input type="text" class="form-control" id="title" name="title" placeholder="Title" value="<?php echo ($userArr[0]->heading); ?>">
                         </div>
                         <div class="mb-3">
                         <label for="html5-date-input" class="form-label">Date</label>
-                        <input class="form-control" type="date" id="date" name="date" value="<?php echo htmlentities($userArr[0]->date); ?>">
+                        <input class="form-control" type="date" id="date" name="date" value="<?php echo ($userArr[0]->date); ?>">
                         </div>
                         <div class="mb-3">
-                        <label for="formFile" class="form-label">Image</label>
-                        <input class="form-control" type="file" name="image" id="image" name="image" value="<?php echo htmlentities($userArr[0]->image); ?>">
+                        <label for="formFile" class="form-label">Image (size : 1920 X 1440px)</label>
+                        <input class="form-control" type="file" name="image" id="image" name="image" value="<?php echo ($userArr[0]->image); ?>">
                       </div>
                       <div class="mb-3">
                         <label for="formFile" class="form-label">Category</label>
                       <div class="input-group">
                             <label class="input-group-text" for="inputGroupSelect01">Options</label>
                             <select class="form-select" id="inputGroupSelect01" name="category">
-                            <option selected="true" value="<?php echo htmlentities($userArr[0]->category); ?>"><?php echo htmlentities($userArr[0]->category); ?></option>
+                            <option selected="true" value="<?php echo ($userArr[0]->category); ?>"><?php echo ($userArr[0]->category); ?></option>
                               <option value="News">News</option>
                               <option value="Events">Events</option>
                             </select>
                           </div>
                       </div>
                       <?php
-                                    if (($userArr[0]->landingStatus) == '0') {
-                        ?>
+                                  if (($userArr[0]->landingStatus) == '0') {
+                      ?>
                       <div class="mb-3">
                         <div class="form-check form-switch mb-2">
                         <input class="form-check-input" type="checkbox" name="landingPageCheck" id="flexSwitchCheckDefault">
@@ -283,7 +283,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                         </div>
                       </div>
                       <?php } else if (($userArr[0]->landingStatus) == '1') {
-                        ?>
+                      ?>
                       <div class="mb-3">
                         <div class="form-check form-switch mb-2">
                         <input class="form-check-input" type="checkbox" name="landingPageCheck" id="flexSwitchCheckChecked" checked="">
@@ -291,13 +291,13 @@ if (strlen($_SESSION['alogin']) == 0) {
                         </div>
                       </div>
                       <?php }
-                        ?>
+                      ?>
 
                         <div class="mb-3">
                           <label class="form-label" for="basic-default-message">Content</label>
-                          <textarea class="form-control" name="content" id="content"><?php echo htmlentities($userArr[0]->content); ?></textarea>
+                          <textarea class="form-control" name="content" id="content"><?php echo ($userArr[0]->content); ?></textarea>
                         </div>
-                        <button type="submit" name="EditNaEBTN" id="EditNaEBTN" class="btn btn-primary">Send</button>
+                        <button type="submit" name="EditNaEBTN" id="EditNaEBTN" class="btn btn-primary">Save</button>
                     <?php }
                     ?>
                     </form>

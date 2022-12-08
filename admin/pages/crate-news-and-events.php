@@ -226,7 +226,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                         <input class="form-control" type="date" id="date" name="date" required>
                         </div>
                         <div class="mb-3">
-                        <label for="formFile" class="form-label">Image</label>
+                        <label for="formFile" class="form-label">Image (size : 1920 X 1440px)</label>
                         <input class="form-control" type="file" name="image" id="image" name="image" required>
                       </div>
                       <div class="mb-3">
@@ -242,7 +242,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                       </div>
                       <div class="mb-3">
                         <div class="form-check form-switch mb-2">
-                        <input class="form-check-input" type="checkbox" name="landingPageCheck" id="flexSwitchCheckDefault" required>
+                        <input class="form-check-input" type="checkbox" name="landingPageCheck" id="flexSwitchCheckDefault">
                         <label class="form-check-label" for="flexSwitchCheckDefault">Need to Show on Home Page ?</label>
                         </div>
                       </div>
@@ -250,7 +250,7 @@ if (strlen($_SESSION['alogin']) == 0) {
                           <label class="form-label" for="basic-default-message">Content</label>
                           <textarea class="form-control" name="content" id="content" required></textarea>
                         </div>
-                        <button type="submit" name="NaEBTN" id="NaEBTN" class="btn btn-primary">Send</button>
+                        <button type="submit" name="NaEBTN" id="NaEBTN" class="btn btn-primary">Save</button>
                     </form>
                       <script>
                          CKEDITOR.replace('content');
