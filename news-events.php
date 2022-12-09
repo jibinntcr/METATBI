@@ -1,16 +1,10 @@
 <?php
 error_reporting(0);
 include('admin/includes/config.php');
-
-$id = $_GET['id'];
-$heading = $_GET['heading'];
-
-$sql = "SELECT * from news where id=$id ";
-$query = $dbh->prepare($sql);
-$query->execute();
-$userArr = $query->fetchAll(PDO::FETCH_OBJ);
-if ($query->rowCount() > 0) {
+$page = $_GET['page'];
 ?>
+
+
 
 <!doctype html>
 <html lang="en">
@@ -22,14 +16,14 @@ if ($query->rowCount() > 0) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo ($userArr[0]->heading); ?> | MetaValley TBI</title>
+    <title><?php echo $page ?> | METAVALLEY TBI</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap"
         rel="stylesheet">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -40,6 +34,7 @@ if ($query->rowCount() > 0) {
     <link href="css/aos.css" rel="stylesheet">
 
     <link href="css/templatemo-nomad-force.css" rel="stylesheet">
+
 </head>
 <link href="images/favi.jpg" rel="icon" />
 
@@ -49,24 +44,17 @@ if ($query->rowCount() > 0) {
 
         <section class="hero" id="hero">
             <div class="heroText">
-                <h1 class="news-detail-title text-white mt-lg-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                    <?php echo ($userArr[0]->category); ?>
+                <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
+                    <?php echo $page ?>
                 </h1>
-
-                <!-- <div class="d-flex justify-content-center align-items-center">
-                    <a href="#" class="text-secondary-white-color social-share-link">
-                        <i class="bi-chat-square-fill me-1"></i>
-                        128
-                    </a>
-
-                    <a href="#" class="social-share-link bi-bookmark-fill ms-3 me-4"></a>
-
-                    <span>21 hours ago</span>
-                </div> -->
             </div>
 
             <div class="videoWrapper">
-                <img src="admin/uploads/<?php echo ($userArr[0]->image); ?>" class="img-fluid news-detail-image" alt="">
+                <video autoplay="" loop="" muted="" class="custom-video" poster="videos/banner.jpg">
+                    <!-- <source src="videos/814dc43e870597176cad645798825c03.mp4" type="video/mp4"> -->
+
+                    <!-- Your browser does not support the video tag. -->
+                </video>
             </div>
 
             <div class="overlay"></div>
@@ -109,23 +97,76 @@ if ($query->rowCount() > 0) {
                 </div>
             </div>
         </nav>
-        <section class="news-detail section-padding">
+
+
+
+        <section class="news section-padding" id="news">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-10 mx-auto">
-                        <h2 class="mb-0" data-aos="fade-up"><?php echo ($userArr[0]->heading); ?></h2>
-                        <?php
-                            $date = date_create($userArr[0]->date);
-                            ?>
-                        <span class="text-muted" data-aos="fade-up">Date :
-                            <?php echo date_format($date, "d/m/Y"); ?></span>
-                        <img class="img-fluid pt-5 mb-5" data-aos="fade-up"
-                            src="admin/uploads/<?php echo ($userArr[0]->image); ?>">
-                        <p class="me-4 justify-para" data-aos="fade-up"><?php echo ($userArr[0]->content); ?></p>
+
+                    <div class="col-12">
+                        <h2 class="mb-5 text-center" data-aos="fade-up"><?php echo $page ?></h2>
                     </div>
+
+                    <?php
+
+                    $sql = "SELECT * from news where category='$page' AND activeStatus='1' ORDER BY date DESC";
+                    $query = $dbh->prepare($sql);
+                    $query->execute();
+                    $results = $query->fetchAll(PDO::FETCH_OBJ);
+
+                    if ($query->rowCount() > 0) {
+                        foreach ($results as $result) {
+                    ?>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a href="news-detail.html" class="news-image-hover news-image-hover-primary">
+                                    <img src="admin/uploads/<?php echo $result->image ?>" class="img-fluid news-image"
+                                        alt="">
+                                </a>
+
+                                <div class="news-category bg-primary text-white"><?php echo $page ?></div>
+                            </div>
+
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <?php
+                                                $heading =  substr($result->heading, 0, 65);
+                                                ?>
+                                        <a onclick="location.href = 'news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>';"
+                                            class="news-title-link"><?php echo  $heading ?>...</a>
+                                    </h5>
+
+                                    <div class="d-flex flex-wrap">
+                                        <?php
+                                                $date = date_create($result->date);
+                                                ?>
+                                        <span class="text-muted"><?php echo date_format($date, "d/m/Y"); ?></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                        }
+                    } ?>
+
                 </div>
             </div>
         </section>
+
+
+        <section class="google-map">
+            <iframe
+                src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                class="map-iframe" width="100%" height="400" style="border:0;" allowfullscreen=""
+                loading="lazy"></iframe>
+        </section>
+
     </main>
 
     <footer class="site-footer">
@@ -247,5 +288,3 @@ if ($query->rowCount() > 0) {
 </body>
 
 </html>
-<?php }
-?>

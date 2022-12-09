@@ -30,13 +30,7 @@ include('admin/includes/config.php');
     <link href="css/aos.css" rel="stylesheet">
 
     <link href="css/templatemo-nomad-force.css" rel="stylesheet">
-    <!--
 
-TemplateMo 567 Nomad Force
-
-https://templatemo.com/tm-567-nomad-force
-
--->
 </head>
 <link href="images/favi.jpg" rel="icon" />
 
@@ -46,9 +40,9 @@ https://templatemo.com/tm-567-nomad-force
 
         <section class="hero" id="hero">
             <div class="heroText">
-                <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
+                <!-- <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
                     METAVALLEY TBI
-                </h1>
+                </h1> -->
 
                 <!-- <p class="text-secondary-white-color mb-3" data-aos="fade-up" data-aos-delay="1000">
                         MES Marampally Technology Business Incubator</p>-->
@@ -57,9 +51,9 @@ https://templatemo.com/tm-567-nomad-force
             <div class="videoWrapper">
                 <video autoplay="" loop="" muted="" class="custom-video"
                     poster="videos/792bd98f3e617786c850493560e11c45.jpg">
-                    <source src="videos/metavalley.mp4" type="video/mp4">
+                    <!-- <source src="videos/metavalley.mp4" type="video/mp4"> -->
 
-                    Your browser does not support the video tag.
+                    <!-- Your browser does not support the video tag. -->
                 </video>
             </div>
 
@@ -68,7 +62,7 @@ https://templatemo.com/tm-567-nomad-force
 
         <nav class="navbar navbar-expand-lg bg-light shadow-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.php">
                     <img class="logo-size" src="images/portfolio/logo.png">
                 </a>
 
@@ -80,7 +74,7 @@ https://templatemo.com/tm-567-nomad-force
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="index.php">Home</a>
                         </li>
 
                         <li class="nav-item">
@@ -88,9 +82,14 @@ https://templatemo.com/tm-567-nomad-force
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#news">Events</a>
+                            <a class="nav-link" href="news-events.php?page=<?php echo 'Events' ?>">Events</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="news-events.php?page=<?php echo 'News' ?>">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="startup.php">StartUp</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact Us</a>
                         </li>
@@ -215,7 +214,7 @@ https://templatemo.com/tm-567-nomad-force
 
                             <div class="mt-3 custom-links">
 
-                                <a href="#" class="text-white custom-link" data-aos="zoom-in"
+                                <a href="startup.php" class="text-white custom-link" data-aos="zoom-in"
                                     data-aos-delay="100">Startup Companies <i class="bi bi-arrow-right ms-2"></i>
                                     </i>
                                 </a>
@@ -312,7 +311,7 @@ https://templatemo.com/tm-567-nomad-force
                                     <?php
                                             $heading =  substr($result->heading, 0, 65);
                                             ?>
-                                    <a onclick="location.href = 'news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>';"
+                                    <a href="news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>"
                                         class="news-title-link"><?php echo $heading ?>...</a>
                                 </h5>
 
@@ -357,7 +356,7 @@ https://templatemo.com/tm-567-nomad-force
                                         <?php
                                                 $heading =  substr($result->heading, 0, 65);
                                                 ?>
-                                        <a onclick="location.href = 'news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>';"
+                                        <a href="news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>"
                                             class="news-title-link"><?php echo  $heading ?>...</a>
                                     </h5>
                                     <?php
@@ -464,16 +463,58 @@ https://templatemo.com/tm-567-nomad-force
     <footer class="site-footer">
         <div class="container">
             <div class="row">
-
-                <div class="col-12">
-                    <h5 class="text-white">
+                <div class="col-4">
+                    <h5 class="text-white">MetaValley</h5>
+                    <p class="text-white text-justify">METAVALLEY TBI is an umbrella for encouraging entrepreneurship
+                        and
+                        facilitating
+                        the growth of startups. It manages a business incubator that provides "Start to scale"
+                        support for
+                        technology-based entrepreneurship and enables the transformation of research into
+                        entrepreneurial businesses.</p>
+                </div>
+                <div class="col-4 ps-5">
+                    <h5 class="text-white">Brows Pages</h5>
+                    <a href="index.php" class="custom-link mt-3">
+                        <i class="bi bi-arrow-right-short me-2"></i>
+                        Home
+                    </a>
+                    </br>
+                    <a href="index.php#about" class="custom-link mt-3">
+                        <i class="bi bi-arrow-right-short me-2"></i>
+                        About
+                    </a>
+                    </br>
+                    <a href="news-events.php?page=<?php echo 'Events' ?>" class="custom-link mt-3">
+                        <i class="bi bi-arrow-right-short me-2"></i>
+                        Events
+                    </a>
+                    </br>
+                    <a href="news-events.php?page=<?php echo 'News' ?>" class="custom-link mt-3">
+                        <i class="bi bi-arrow-right-short me-2"></i>
+                        News
+                    </a>
+                    </br>
+                    <a href="startup.php" class="custom-link mt-3">
+                        <i class="bi bi-arrow-right-short me-2"></i>
+                        Start UP
+                    </a>
+                    </br>
+                    <a href="index.php#contact" class="custom-link mt-3">
+                        <i class="bi bi-arrow-right-short me-2"></i>
+                        Contact Us
+                    </a>
+                </div>
+                <div class="col-4">
+                    <h5 class="text-white">Contact</h5>
+                    <p class="text-white">
                         <i class="bi-geo-alt-fill me-2"></i>
                         MES College Marampally</br>
                         Marampally P O, North Vazhakulam, Aluva</br>
                         Ernakulam (Dist), Kerala, India</br>
                         Pincode - 683 105
 
-                    </h5>
+                    </p>
                     <a href="mailto:info@metavalleytbi.com" class="custom-link mt-3">
                         <i class="bi bi-envelope me-2"></i>
                         info@metavalleytbi.com
@@ -492,6 +533,9 @@ https://templatemo.com/tm-567-nomad-force
                     <a href="https://mesmarampally.org/" target="_blank" class="custom-link mt-3 mb-5">
                         <i class="bi bi-globe me-2"></i>www.mesmarampally.org
                     </a>
+                </div>
+
+                <div class="col-12">
                     <div class="mb-5 text-center">
                         <ul class="social-icon">
                             <li>

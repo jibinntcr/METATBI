@@ -1,17 +1,3 @@
-<?php
-error_reporting(0);
-include('admin/includes/config.php');
-
-$id = $_GET['id'];
-$heading = $_GET['heading'];
-
-$sql = "SELECT * from news where id=$id ";
-$query = $dbh->prepare($sql);
-$query->execute();
-$userArr = $query->fetchAll(PDO::FETCH_OBJ);
-if ($query->rowCount() > 0) {
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -22,7 +8,7 @@ if ($query->rowCount() > 0) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo ($userArr[0]->heading); ?> | MetaValley TBI</title>
+    <title>Start UP | MetaValley TBI</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,32 +32,6 @@ if ($query->rowCount() > 0) {
 <body>
 
     <main>
-
-        <section class="hero" id="hero">
-            <div class="heroText">
-                <h1 class="news-detail-title text-white mt-lg-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="300">
-                    <?php echo ($userArr[0]->category); ?>
-                </h1>
-
-                <!-- <div class="d-flex justify-content-center align-items-center">
-                    <a href="#" class="text-secondary-white-color social-share-link">
-                        <i class="bi-chat-square-fill me-1"></i>
-                        128
-                    </a>
-
-                    <a href="#" class="social-share-link bi-bookmark-fill ms-3 me-4"></a>
-
-                    <span>21 hours ago</span>
-                </div> -->
-            </div>
-
-            <div class="videoWrapper">
-                <img src="admin/uploads/<?php echo ($userArr[0]->image); ?>" class="img-fluid news-detail-image" alt="">
-            </div>
-
-            <div class="overlay"></div>
-        </section>
-
         <nav class="navbar navbar-expand-lg bg-light shadow-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.php">
@@ -109,23 +69,108 @@ if ($query->rowCount() > 0) {
                 </div>
             </div>
         </nav>
-        <section class="news-detail section-padding">
+
+        <section class="news section-padding" id="news">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-10 mx-auto">
-                        <h2 class="mb-0" data-aos="fade-up"><?php echo ($userArr[0]->heading); ?></h2>
-                        <?php
-                            $date = date_create($userArr[0]->date);
-                            ?>
-                        <span class="text-muted" data-aos="fade-up">Date :
-                            <?php echo date_format($date, "d/m/Y"); ?></span>
-                        <img class="img-fluid pt-5 mb-5" data-aos="fade-up"
-                            src="admin/uploads/<?php echo ($userArr[0]->image); ?>">
-                        <p class="me-4 justify-para" data-aos="fade-up"><?php echo ($userArr[0]->content); ?></p>
+
+                    <div class="col-12">
+                        <h2 class="mb-5 text-center" data-aos="fade-up">StartUp</h2>
                     </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/asia-business-woman-feeling-happy-smiling-looking-camera-while-relax-home-office.jpg"
+                                        class="img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a class="news-title-link">Finder Sports</a>
+                                    </h5>
+                                    <a target="_blank" href="https://finderfitsports.com/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.finderfitsports.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/happy-african-american-professional-manager-smiling-looking-camera-headshot-portrait.jpg"
+                                        class="img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a class="news-title-link">Credize</a>
+                                    </h5>
+                                    <a target="_blank" href="https://credize.com/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.credize.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+                                <a href="news-detail.html" class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/project-leder-with-disabilities-looking-front-sitting-immobilized-wheelchair-business-office-room.jpg"
+                                        class="img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a href="news-detail.html" class="news-title-link">Monzha Research Labs</a>
+                                    </h5>
+                                    <a target="_blank" href="https://monzhalabs.tech/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.monzhalabs.tech
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/studio-shot-beautiful-happy-retired-caucasian-female-with-pixie-hairdo-crossing-arms-her-chest-having-confident-look-smiling-broadly.jpg"
+                                        class="img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a class="news-title-link">Infinio Technology Solutions</a>
+                                    </h5>
+                                    <a target="_blank" href="https://infinio.co.in/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.infinio.co.in
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </section>
+
+
     </main>
 
     <footer class="site-footer">
@@ -247,5 +292,3 @@ if ($query->rowCount() > 0) {
 </body>
 
 </html>
-<?php }
-?>

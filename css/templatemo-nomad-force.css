@@ -10,7 +10,7 @@ https://templatemo.com/tm-567-nomad-force
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color: #FFFFFF;
+  --white-color: #ffffff;
   --primary-color: #00eda4;
   --section-bg-color: #f9f9f9;
   --dark-color: #000000;
@@ -19,7 +19,7 @@ https://templatemo.com/tm-567-nomad-force
   --title-color: #565758;
   --p-color: #717275;
 
-  --body-font-family: 'Noto Sans JP', sans-serif;
+  --body-font-family: "Noto Sans JP", sans-serif;
 
   --h1-font-size: 72px;
   --h2-font-size: 42px;
@@ -123,7 +123,6 @@ p {
   letter-spacing: 0.5px;
 }
 
-
 .text-secondary-white-color {
   color: var(--text-secondary-white-color);
 }
@@ -191,7 +190,14 @@ a:hover {
   overflow: hidden;
   z-index: 1;
   display: inline-block;
-  transition: all .3s cubic-bezier(.645, .045, .355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.custom-linkstartup {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .custom-link::after {
@@ -203,7 +209,20 @@ a:hover {
   left: auto;
   right: 0;
   z-index: -1;
-  transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
+  transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+  background: currentColor;
+}
+
+.custom-linkstartup::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  position: absolute;
+  left: auto;
+  right: 0;
+  z-index: -1;
+  transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
   background: currentColor;
 }
 
@@ -212,10 +231,19 @@ a:hover {
   left: 0;
   right: auto;
 }
+.custom-linkstartup:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
 
-.custom-link:hover,
-.custom-link:hover::after {
-  color: var(--white-color);
+.custom-linkstartup:hover,
+.custom-linkstartup:hover::after {
+  color: var(--dark-color);
+}
+custom-linkstartup:hover,
+.custom-inkstartup:hover::after {
+  color: var(--dark-color);
 }
 
 b,
@@ -317,7 +345,8 @@ strong {
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
   transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
   transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease,
+    -webkit-transform 300ms 350ms ease;
   top: 0;
 }
 
@@ -342,14 +371,15 @@ strong {
 .navbar-toggler .navbar-toggler-icon:after {
   transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
   transition: top 300ms 350ms ease, transform 300ms 50ms ease;
-  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease,
+    -webkit-transform 300ms 50ms ease;
   position: absolute;
   right: 0;
   left: 0;
   background: var(--dark-color);
   width: 30px;
   height: 2px;
-  content: '';
+  content: "";
 }
 
 .navbar-toggler .navbar-toggler-icon:before {
@@ -501,7 +531,7 @@ strong {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  transition: all .3s cubic-bezier(.645, .045, .355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   padding-bottom: 4px;
   height: 100%;
 }
@@ -515,7 +545,7 @@ strong {
   left: auto;
   right: 0;
   z-index: -1;
-  transition: width .6s cubic-bezier(.25, .8, .25, 1) 0s;
+  transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
   background: #198754;
 }
 
@@ -555,7 +585,7 @@ strong {
 }
 
 .social-share-link,
-.social-share-link+span {
+.social-share-link + span {
   color: rgba(255, 255, 255, 0.65);
 }
 
@@ -581,7 +611,7 @@ strong {
   padding-bottom: 12px;
 }
 
-.contact-form button[type='submit'] {
+.contact-form button[type="submit"] {
   background: var(--dark-color);
   border: none;
   border-radius: 100px;
@@ -592,7 +622,7 @@ strong {
   transition: all 0.6s ease-out;
 }
 
-.contact-form button[type='submit']:hover {
+.contact-form button[type="submit"]:hover {
   background: var(--primary-color);
 }
 
@@ -751,4 +781,8 @@ strong {
 .logo-size {
   max-width: auto;
   height: 90px;
+}
+.text-justify {
+  text-align: justify;
+  text-justify: inter-word;
 }
