@@ -1,4 +1,5 @@
 <?php
+session_start();
 error_reporting(0);
 include('admin/includes/config.php');
 
@@ -30,6 +31,7 @@ include('admin/includes/config.php');
     <link href="css/aos.css" rel="stylesheet">
 
     <link href="css/templatemo-nomad-force.css" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 <link href="images/favi.jpg" rel="icon" />
@@ -37,27 +39,46 @@ include('admin/includes/config.php');
 <body>
 
     <main>
+        <?php
+        if (isset($_SESSION["mailstatus"]) == "success") {
+        ?>
+        <script>
+        swal({
+            title: "Success!",
+            text: "Our team will contact you soon!",
+            icon: "success",
+            button: "OK",
+        });
+        </script>
+        <?php
+            unset($_SESSION["mailstatus"]);
+        } else if (isset($_SESSION["mailstatus"]) == "not") {
+        ?>
+        <script>
+        swal("Something went wrong !", "Please try after some time!", "error");
+        </script>
+        <?php
+            unset($_SESSION["mailstatus"]);
+        }
+        ?>
+        <section id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="heroTextBanner">
+                        <h1 class="text-white mt-0 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
+                            METAVALLEY TBI
+                        </h1>
 
-        <section class="hero" id="hero">
-            <div class="heroText">
-                <!-- <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
-                    METAVALLEY TBI
-                </h1> -->
-
-                <!-- <p class="text-secondary-white-color mb-3" data-aos="fade-up" data-aos-delay="1000">
-                        MES Marampally Technology Business Incubator</p>-->
+                        <p class="text-secondary-white-color mb-0" data-aos="fade-up" data-aos-delay="1000">
+                            MES Marampally Technology Business Incubator</p>
+                    </div>
+                    <img src="videos/banner1.jpg" class="img-fluid team-image" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="videos/banner2.jpg" class="img-fluid team-image" alt="">
+                </div>
             </div>
 
-            <div class="videoWrapper">
-                <video autoplay="" loop="" muted="" class="custom-video"
-                    poster="videos/792bd98f3e617786c850493560e11c45.jpg">
-                    <!-- <source src="videos/metavalley.mp4" type="video/mp4"> -->
-
-                    <!-- Your browser does not support the video tag. -->
-                </video>
-            </div>
-
-            <div class="overlay"></div>
         </section>
 
         <nav class="navbar navbar-expand-lg bg-light shadow-lg">
@@ -109,9 +130,9 @@ include('admin/includes/config.php');
                     <div class="col-lg-6 col-12 mt-3 mb-lg-5">
                         <p class="me-4 justify-para" data-aos="fade-up" data-aos-delay="300">
                             <b>METAVALLEY TBI</b> is an umbrella for encouraging entrepreneurship and facilitating the
-                            growth of tech startups. It manages a business incubator that provides "Start to scale"
-                            support for technology-based entrepreneurship and enables the transformation of research
-                            into entrepreneurial businesses.
+                            growth of startups. It manages a business incubator that provides "Start to scale" support
+                            for technology-based entrepreneurship and enables the transformation of research into
+                            entrepreneurial businesses.
                             <br><br>We launched our entrepreneurial ventures by launching an IEDC under the guidance of
                             the Kerala Startup Mission. As a result of this excellent start, a number of our students
                             developed novel initiatives. It was vital to elevate the IEDC to the level of a TBI to
@@ -382,12 +403,12 @@ include('admin/includes/config.php');
                     <div class="col-lg-7 col-12 mx-auto">
 
                         <h2 class="mb-4 text-center" data-aos="fade-up">Write to us</h2>
-
-                        <form action="#" method="post" class="contact-form" role="form" data-aos="fade-up">
+                        <form action="mail.php" method="POST" enctype="multipart/form-data" autocomplete="off"
+                            class="contact-form" role="form" data-aos="fade-up">
 
                             <div class="row">
 
-                                <div class="col-lg-6 col-6">
+                                <div class="col-lg-6 col-6 ">
                                     <label for="name" class="form-label">Name <sup class="text-danger">*</sup>
                                     </label>
 
@@ -403,6 +424,21 @@ include('admin/includes/config.php');
                                         class="form-control" placeholder="Email address" required>
                                 </div>
 
+                                <div class="col-lg-6 col-6 my-4">
+                                    <label for="phone" class="form-label">Phone Number <sup class="text-danger">*</sup>
+                                    </label>
+
+                                    <input type="number" name="phone" id="phone" class="form-control"
+                                        placeholder="Phone Number" required>
+                                </div>
+                                <div class="col-lg-6 col-6 my-4">
+                                    <label for="subject" class="form-label">Subject<sup class="text-danger">*</sup>
+                                    </label>
+
+                                    <input type="text" name="subject" id="subject" class="form-control"
+                                        placeholder="Subject">
+                                </div>
+
                                 <div class="col-12 my-4">
                                     <label for="message" class="form-label">How can we help?</label>
 
@@ -410,39 +446,9 @@ include('admin/includes/config.php');
                                         placeholder="Tell us about the project" required></textarea>
 
                                 </div>
-                                <!--
-                                    <div class="col-12">
-                                        <label for="services" class="form-label">Services<sup class="text-danger">*</sup>
-                                        </label>
-                                    </div>
-                                   
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-check">
-                                            <input type="checkbox" id="checkbox1" name="checkbox1" class="form-check-input">
-
-                                            <label class="form-check-label" for="checkbox1">Branding</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-12 my-2 my-lg-0">
-                                        <div class="form-check">
-                                            <input type="checkbox" id="checkbox2" name="checkbox2" class="form-check-input">
-
-                                            <label class="form-check-label" for="checkbox2">Digital Experiences</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-12">
-                                        <div class="form-check">
-                                            <input type="checkbox" id="checkbox3" name="checkbox3" class="form-check-input">
-
-                                            <label class="form-check-label" for="checkbox3">Web Development</label>
-                                        </div>
-                                    </div>
-                                </div>
--->
                                 <div class="col-lg-5 col-12 mx-auto mt-5">
-                                    <button type="submit" class="form-control">Send Message</button>
+                                    <button type="submit" name="submit" id="submit" class="form-control">Send
+                                        Message</button>
                                 </div>
                         </form>
                     </div>
@@ -461,11 +467,12 @@ include('admin/includes/config.php');
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-4">
                     <h5 class="text-white">MetaValley</h5>
-                    <p class="text-white text-justify">METAVALLEY TBI is an umbrella for encouraging entrepreneurship
+                    <p class="text-white text-justify">METAVALLEY TBI is an umbrella for encouraging
+                        entrepreneurship
                         and
                         facilitating
                         the growth of startups. It manages a business incubator that provides "Start to scale"
@@ -473,7 +480,7 @@ include('admin/includes/config.php');
                         technology-based entrepreneurship and enables the transformation of research into
                         entrepreneurial businesses.</p>
                 </div>
-                <div class="col-4 ps-5">
+                <div class="col-lg-4 col-md-4">
                     <h5 class="text-white">Brows Pages</h5>
                     <a href="index.php" class="custom-link mt-3">
                         <i class="bi bi-arrow-right-short me-2"></i>
@@ -505,7 +512,7 @@ include('admin/includes/config.php');
                         Contact Us
                     </a>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-md-4">
                     <h5 class="text-white">Contact</h5>
                     <p class="text-white">
                         <i class="bi-geo-alt-fill me-2"></i>
@@ -534,36 +541,35 @@ include('admin/includes/config.php');
                         <i class="bi bi-globe me-2"></i>www.mesmarampally.org
                     </a>
                 </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="mb-5 text-center">
+                    <ul class="social-icon">
+                        <li>
+                            <a href="https://www.facebook.com/metavalleytbi" class="social-icon-link bi-facebook"></a>
+                        </li>
 
-                <div class="col-12">
-                    <div class="mb-5 text-center">
-                        <ul class="social-icon">
-                            <li>
-                                <a href="https://www.facebook.com/metavalleytbi"
-                                    class="social-icon-link bi-facebook"></a>
-                            </li>
+                        <li>
+                            <a href="https://twitter.com/metavalleytbi" class="social-icon-link bi-twitter"></a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/metavalleytbi" class="social-icon-link bi-instagram"></a>
+                        </li>
 
-                            <li>
-                                <a href="https://twitter.com/metavalleytbi" class="social-icon-link bi-twitter"></a>
-                            </li>
-                            <li>
-                                <a href="https://instagram.com/metavalleytbi" class="social-icon-link bi-instagram"></a>
-                            </li>
-
-                            <li>
-                                <a href="https://www.linkedin.com/company/metavalleytbi"
-                                    class="social-icon-link bi-linkedin"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="text-center">
-                        <a href="#">MetaValley TBI</a>, © All Right Reserved. Designed by <a
-                            href="https://infiniio.co.in/" target="_blank">Infinio Technology Solutions</a>
-                    </div>
-
+                        <li>
+                            <a href="https://www.linkedin.com/company/metavalleytbi"
+                                class="social-icon-link bi-linkedin"></a>
+                        </li>
+                    </ul>
                 </div>
+                <div class="text-center">
+                    <a href="#">MetaValley TBI</a>, © All Right Reserved. Designed by <a href="https://infiniio.co.in/"
+                        target="_blank">Infinio Technology Solutions</a>
+                </div>
+
             </div>
         </div>
+
     </footer>
 
     <!-- JAVASCRIPT FILES -->

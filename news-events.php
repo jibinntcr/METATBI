@@ -41,25 +41,6 @@ $page = $_GET['page'];
 <body>
 
     <main>
-
-        <section class="hero" id="hero">
-            <div class="heroText">
-                <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
-                    <?php echo $page ?>
-                </h1>
-            </div>
-
-            <div class="videoWrapper">
-                <video autoplay="" loop="" muted="" class="custom-video" poster="videos/banner.jpg">
-                    <!-- <source src="videos/814dc43e870597176cad645798825c03.mp4" type="video/mp4"> -->
-
-                    <!-- Your browser does not support the video tag. -->
-                </video>
-            </div>
-
-            <div class="overlay"></div>
-        </section>
-
         <nav class="navbar navbar-expand-lg bg-light shadow-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.php">
@@ -160,21 +141,22 @@ $page = $_GET['page'];
         </section>
 
 
-        <section class="google-map">
+        <!-- <section class="google-map">
             <iframe
                 src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 class="map-iframe" width="100%" height="400" style="border:0;" allowfullscreen=""
                 loading="lazy"></iframe>
-        </section>
+        </section> -->
 
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-4">
                     <h5 class="text-white">MetaValley</h5>
-                    <p class="text-white text-justify">METAVALLEY TBI is an umbrella for encouraging entrepreneurship
+                    <p class="text-white text-justify">METAVALLEY TBI is an umbrella for encouraging
+                        entrepreneurship
                         and
                         facilitating
                         the growth of startups. It manages a business incubator that provides "Start to scale"
@@ -182,7 +164,7 @@ $page = $_GET['page'];
                         technology-based entrepreneurship and enables the transformation of research into
                         entrepreneurial businesses.</p>
                 </div>
-                <div class="col-4 ps-5">
+                <div class="col-lg-4 col-md-4">
                     <h5 class="text-white">Brows Pages</h5>
                     <a href="index.php" class="custom-link mt-3">
                         <i class="bi bi-arrow-right-short me-2"></i>
@@ -214,7 +196,7 @@ $page = $_GET['page'];
                         Contact Us
                     </a>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-md-4">
                     <h5 class="text-white">Contact</h5>
                     <p class="text-white">
                         <i class="bi-geo-alt-fill me-2"></i>
@@ -243,36 +225,35 @@ $page = $_GET['page'];
                         <i class="bi bi-globe me-2"></i>www.mesmarampally.org
                     </a>
                 </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="mb-5 text-center">
+                    <ul class="social-icon">
+                        <li>
+                            <a href="https://www.facebook.com/metavalleytbi" class="social-icon-link bi-facebook"></a>
+                        </li>
 
-                <div class="col-12">
-                    <div class="mb-5 text-center">
-                        <ul class="social-icon">
-                            <li>
-                                <a href="https://www.facebook.com/metavalleytbi"
-                                    class="social-icon-link bi-facebook"></a>
-                            </li>
+                        <li>
+                            <a href="https://twitter.com/metavalleytbi" class="social-icon-link bi-twitter"></a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/metavalleytbi" class="social-icon-link bi-instagram"></a>
+                        </li>
 
-                            <li>
-                                <a href="https://twitter.com/metavalleytbi" class="social-icon-link bi-twitter"></a>
-                            </li>
-                            <li>
-                                <a href="https://instagram.com/metavalleytbi" class="social-icon-link bi-instagram"></a>
-                            </li>
-
-                            <li>
-                                <a href="https://www.linkedin.com/company/metavalleytbi"
-                                    class="social-icon-link bi-linkedin"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="text-center">
-                        <a href="#">MetaValley TBI</a>, © All Right Reserved. Designed by <a
-                            href="https://infiniio.co.in/" target="_blank">Infinio Technology Solutions</a>
-                    </div>
-
+                        <li>
+                            <a href="https://www.linkedin.com/company/metavalleytbi"
+                                class="social-icon-link bi-linkedin"></a>
+                        </li>
+                    </ul>
                 </div>
+                <div class="text-center">
+                    <a href="#">MetaValley TBI</a>, © All Right Reserved. Designed by <a href="https://infiniio.co.in/"
+                        target="_blank">Infinio Technology Solutions</a>
+                </div>
+
             </div>
         </div>
+
     </footer>
 
     <!-- JAVASCRIPT FILES -->
