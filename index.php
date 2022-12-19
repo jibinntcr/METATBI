@@ -20,8 +20,7 @@ include('admin/includes/config.php');
 
     <!-- CSS FILES -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
@@ -42,26 +41,26 @@ include('admin/includes/config.php');
         <?php
         if (isset($_SESSION["mailstatus"]) == "success") {
         ?>
-        <script>
-        swal({
-            title: "Success!",
-            text: "Our team will contact you soon!",
-            icon: "success",
-            button: "OK",
-        });
-        </script>
+            <script>
+                swal({
+                    title: "Success!",
+                    text: "Our team will contact you soon!",
+                    icon: "success",
+                    button: "OK",
+                });
+            </script>
         <?php
             unset($_SESSION["mailstatus"]);
         } else if (isset($_SESSION["mailstatus"]) == "not") {
         ?>
-        <script>
-        swal("Something went wrong !", "Please try after some time!", "error");
-        </script>
+            <script>
+                swal("Something went wrong !", "Please try after some time!", "error");
+            </script>
         <?php
             unset($_SESSION["mailstatus"]);
         }
         ?>
-        <section id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <section id="myCarouselBanner" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="heroTextBanner">
@@ -72,12 +71,35 @@ include('admin/includes/config.php');
                         <p class="text-secondary-white-color mb-0" data-aos="fade-up" data-aos-delay="1000">
                             MES Marampally Technology Business Incubator</p>
                     </div>
-                    <img src="videos/banner1.jpg" class="img-fluid team-image" alt="">
+                    <img src="videos/banner1-1.jpg" class="img-fluid team-image" alt="">
                 </div>
                 <div class="carousel-item">
                     <img src="videos/banner2.jpg" class="img-fluid team-image" alt="">
                 </div>
+                <div class="carousel-item">
+                    <div class="heroTextBanner">
+                        <h3 class="text-white mt-0 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
+                            "Empower with Metavalley"
+                        </h3>
+
+                        <!-- <p class="text-secondary-white-color mb-0" data-aos="fade-up" data-aos-delay="1000">
+                            "Empower with Metavalley"</p> -->
+                    </div>
+                    <img src="videos/banner3.jpg" class="img-fluid team-image" alt="">
+                </div>
             </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarouselBanner" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarouselBanner" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                <span class="visually-hidden">Next</span>
+            </button>
 
         </section>
 
@@ -87,8 +109,7 @@ include('admin/includes/config.php');
                     <img class="logo-size" src="images/portfolio/logo.png">
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -109,7 +130,7 @@ include('admin/includes/config.php');
                             <a class="nav-link" href="news-events.php?page=<?php echo 'News' ?>">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="startup.php">StartUp</a>
+                            <a class="nav-link" href="startup.php">Start-Up</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact Us</a>
@@ -160,31 +181,26 @@ include('admin/includes/config.php');
                     </div>
 
                     <div class="col-lg-6 col-auto mt-3 mb-lg-5 mb-3">
-                        <img src="images/portfolio/severin-candrian-nn3uIZqmUtE-unsplash.jpeg"
-                            class="img-fluid portfolio-image" alt="" data-aos="fade-up" data-aos-delay="500">
+                        <img src="images/portfolio/severin-candrian-nn3uIZqmUtE-unsplash.jpeg" class="img-fluid portfolio-image" alt="" data-aos="fade-up" data-aos-delay="500">
                     </div>
                     <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
                         <p class="justify-para" data-aos="fade-up" data-aos-delay="500">An overriding objective of the
-                            METAVALLEY TBI is to transform students' minds from job-seekers to entrepreneurs, utilizing
+                            <b>METAVALLEY TBI</b> is to transform students' minds from job-seekers to entrepreneurs,
+                            utilizing
                             the theoretical and practical lessons they get at the college. The other objectives are :
                         </p>
                         <ul class="justify-para" data-aos="fade-up" data-aos-delay="800">
-                            <li class="mb-2 mission" data-aos="fade-up">Assets to create technology-based incubators.
+                            <li class="mb-2 mission" data-aos="fade-up">Nurture entrepreneurial culture among students
+                                and youth</li>
+                            <li class="mb-2 mission" data-aos="fade-up">Strengthen the Start-up ecosystem in the region
                             </li>
-                            <li class="mb-2 mission" data-aos="fade-up">Contribute to the creation of high-value
-                                employment and services.</li>
-                            <li class="mb-2 mission" data-aos="fade-up">Introduction of Entrepreneurial culture to the
-                                students and the common people.</li>
-                            <li class="mb-2 mission" data-aos="fade-up">Create excellent networking opportunities for
-                                the growth of technology-based start-ups.</li>
-                            <li class="mb-2 mission" data-aos="fade-up">Create widely recognised technology.</li>
-                            <li class="mb-2 mission" data-aos="fade-up">Encourage students to create financially viable
-                                educational initiatives.</li>
-                            <li class="mb-2 mission" data-aos="fade-up">Make students into entrepreneurs.</li>
-                            <li class="mb-2 mission" data-aos="fade-up">Raise awareness about technology incubation and
-                                commercialization of research and development goods and methods.</li>
-                            <li class="mb-2 mission" data-aos="fade-up">Encourage the development of small and
-                                medium-sized businesses.</li>
+                            <li class="mb-2 mission" data-aos="fade-up">Handhold MSMEs by developing innovation clusters
+                            </li>
+                            <li class="mb-2 mission" data-aos="fade-up">Support Kudumbasree Entrepreneurs and Women’s
+                                Start-ups</li>
+                            <li class="mb-2 mission" data-aos="fade-up">Promote investor education and build Investor
+                                Network (M’VIN)
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -227,16 +243,14 @@ include('admin/includes/config.php');
                     </div>
 
                     <div class="col-lg-3 col-12 bg-dark">
-                        <div
-                            class="d-flex flex-column flex-wrap justify-content-center h-100 py-5 px-4 pt-lg-4 pb-lg-0">
+                        <div class="d-flex flex-column flex-wrap justify-content-center h-100 py-5 px-4 pt-lg-4 pb-lg-0">
                             <h3 class="text-white mb-3" data-aos="fade-up">We Give Everything It Takes.</h3>
 
                             <!--<p class="text-secondary-white-color" data-aos="fade-up">Startup Companies</p>-->
 
                             <div class="mt-3 custom-links">
 
-                                <a href="startup.php" class="text-white custom-link" data-aos="zoom-in"
-                                    data-aos-delay="100">Startup Companies <i class="bi bi-arrow-right ms-2"></i>
+                                <a href="startup.php" class="text-white custom-link" data-aos="zoom-in" data-aos-delay="100">Startup Companies <i class="bi bi-arrow-right ms-2"></i>
                                     </i>
                                 </a>
 
@@ -251,14 +265,12 @@ include('admin/includes/config.php');
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <a target="_blank" href="https://infiniio.co.in/">
-                                        <img src="images/people/studio-shot-beautiful-happy-retired-caucasian-female-with-pixie-hairdo-crossing-arms-her-chest-having-confident-look-smiling-broadly.jpg"
-                                            class="img-fluid team-image" alt="">
+                                        <img src="images/people/studio-shot-beautiful-happy-retired-caucasian-female-with-pixie-hairdo-crossing-arms-her-chest-having-confident-look-smiling-broadly.jpg" class="img-fluid team-image" alt="">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a target="_blank" href="http://www.monzhalabs.tech">
-                                        <img src="images/people/project-leder-with-disabilities-looking-front-sitting-immobilized-wheelchair-business-office-room.jpg"
-                                            class="img-fluid team-image" alt="">
+                                        <img src="images/people/project-leder-with-disabilities-looking-front-sitting-immobilized-wheelchair-business-office-room.jpg" class="img-fluid team-image" alt="">
                                         <!-- <div class="team-thumb bg-primary">
                                             <h3 class="text-white mb-0">Morgan S.</h3>
 
@@ -268,27 +280,23 @@ include('admin/includes/config.php');
                                 </div>
                                 <div class="carousel-item">
                                     <a target="_blank" href="https://finderfitsports.com/">
-                                        <img src="images/people/asia-business-woman-feeling-happy-smiling-looking-camera-while-relax-home-office.jpg"
-                                            class="img-fluid team-image" alt="">
+                                        <img src="images/people/asia-business-woman-feeling-happy-smiling-looking-camera-while-relax-home-office.jpg" class="img-fluid team-image" alt="">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a target="_blank" href="https://credize.com/">
-                                        <img src="images/people/happy-african-american-professional-manager-smiling-looking-camera-headshot-portrait.jpg"
-                                            class="img-fluid team-image" alt="">
+                                        <img src="images/people/happy-african-american-professional-manager-smiling-looking-camera-headshot-portrait.jpg" class="img-fluid team-image" alt="">
                                     </a>
                                 </div>
                             </div>
 
-                            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
-                                data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 
                                 <span class="visually-hidden">Previous</span>
                             </button>
 
-                            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel"
-                                data-bs-slide="next">
+                            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
 
                                 <span class="visually-hidden">Next</span>
@@ -317,32 +325,29 @@ include('admin/includes/config.php');
                     if ($query->rowCount() > 0) {
                         foreach ($results as $result) {
                     ?>
-                    <div class="col-lg-6 col-12 mb-5 mb-lg-0">
-                        <div class="news-thumb" data-aos="fade-up">
-                            <a onclick="location.href = 'news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>';"
-                                class="news-image-hover news-image-hover-warning">
-                                <img src="admin/uploads/<?php echo  $result->image ?>"
-                                    class="img-fluid large-news-image news-image" alt="">
-                            </a>
+                            <div class="col-lg-6 col-12 mb-5 mb-lg-0">
+                                <div class="news-thumb" data-aos="fade-up">
+                                    <a onclick="location.href = 'news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>';" class="news-image-hover news-image-hover-warning">
+                                        <img src="admin/uploads/<?php echo  $result->image ?>" class="img-fluid large-news-image news-image" alt="">
+                                    </a>
 
-                            <div class="news-category bg-warning text-white"><?php echo  $result->category ?></div>
+                                    <div class="news-category bg-warning text-white"><?php echo  $result->category ?></div>
 
-                            <div class="news-text-info">
-                                <h5 class="news-title">
-                                    <?php
+                                    <div class="news-text-info">
+                                        <h5 class="news-title">
+                                            <?php
                                             $heading =  substr($result->heading, 0, 65);
                                             ?>
-                                    <a href="news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>"
-                                        class="news-title-link"><?php echo $heading ?>...</a>
-                                </h5>
+                                            <a href="news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>" class="news-title-link"><?php echo $heading ?>...</a>
+                                        </h5>
 
-                                <?php
+                                        <?php
                                         $date = date_create($result->date);
                                         ?>
-                                <span class="text-muted"><?php echo date_format($date, "d/m/Y"); ?></span>
+                                        <span class="text-muted"><?php echo date_format($date, "d/m/Y"); ?></span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
                     <?php }
                     }
                     ?>
@@ -359,34 +364,31 @@ include('admin/includes/config.php');
                             foreach ($results as $result) {
                         ?>
 
-                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
-                            <div class="news-top w-100" data-aos="fade-up">
+                                <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                                    <div class="news-top w-100" data-aos="fade-up">
 
-                                <a onclick="location.href = 'news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>';"
-                                    target="_blank" class="news-image-hover news-image-hover-success">
-                                    <img src="admin/uploads/<?php echo  $result->image ?>" class="img-fluid news-image"
-                                        alt="">
-                                </a>
+                                        <a onclick="location.href = 'news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>';" target="_blank" class="news-image-hover news-image-hover-success">
+                                            <img src="admin/uploads/<?php echo  $result->image ?>" class="img-fluid news-image" alt="">
+                                        </a>
 
-                                <div class="news-category bg-success text-white"><?php echo  $result->category ?></div>
-                            </div>
+                                        <div class="news-category bg-success text-white"><?php echo  $result->category ?></div>
+                                    </div>
 
-                            <div class="news-bottom w-100">
-                                <div class="news-text-info">
-                                    <h5 class="news-title">
-                                        <?php
+                                    <div class="news-bottom w-100">
+                                        <div class="news-text-info">
+                                            <h5 class="news-title">
+                                                <?php
                                                 $heading =  substr($result->heading, 0, 65);
                                                 ?>
-                                        <a href="news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>"
-                                            class="news-title-link"><?php echo  $heading ?>...</a>
-                                    </h5>
-                                    <?php
+                                                <a href="news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>" class="news-title-link"><?php echo  $heading ?>...</a>
+                                            </h5>
+                                            <?php
                                             $date = date_create($result->date);
                                             ?>
-                                    <span class="text-muted"><?php echo date_format($date, "d/m/Y"); ?></span>
+                                            <span class="text-muted"><?php echo date_format($date, "d/m/Y"); ?></span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
                         <?php }
                         }
                         ?>
@@ -403,8 +405,7 @@ include('admin/includes/config.php');
                     <div class="col-lg-7 col-12 mx-auto">
 
                         <h2 class="mb-4 text-center" data-aos="fade-up">Write to us</h2>
-                        <form action="mail.php" method="POST" enctype="multipart/form-data" autocomplete="off"
-                            class="contact-form" role="form" data-aos="fade-up">
+                        <form action="mail.php" method="POST" enctype="multipart/form-data" autocomplete="off" class="contact-form" role="form" data-aos="fade-up">
 
                             <div class="row">
 
@@ -412,38 +413,33 @@ include('admin/includes/config.php');
                                     <label for="name" class="form-label">Name <sup class="text-danger">*</sup>
                                     </label>
 
-                                    <input type="text" name="name" id="name" class="form-control"
-                                        placeholder="Full name" required>
+                                    <input type="text" name="name" id="name" class="form-control" placeholder="Full name" required>
                                 </div>
 
                                 <div class="col-lg-6 col-6">
                                     <label for="email" class="form-label">Email <sup class="text-danger">*</sup>
                                     </label>
 
-                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"
-                                        class="form-control" placeholder="Email address" required>
+                                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email address" required>
                                 </div>
 
                                 <div class="col-lg-6 col-6 my-4">
                                     <label for="phone" class="form-label">Phone Number <sup class="text-danger">*</sup>
                                     </label>
 
-                                    <input type="number" name="phone" id="phone" class="form-control"
-                                        placeholder="Phone Number" required>
+                                    <input type="number" name="phone" id="phone" class="form-control" placeholder="Phone Number" required>
                                 </div>
                                 <div class="col-lg-6 col-6 my-4">
                                     <label for="subject" class="form-label">Subject<sup class="text-danger">*</sup>
                                     </label>
 
-                                    <input type="text" name="subject" id="subject" class="form-control"
-                                        placeholder="Subject">
+                                    <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject">
                                 </div>
 
                                 <div class="col-12 my-4">
                                     <label for="message" class="form-label">How can we help?</label>
 
-                                    <textarea name="message" rows="6" class="form-control" id="message"
-                                        placeholder="Tell us about the project" required></textarea>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Tell us about the project" required></textarea>
 
                                 </div>
                                 <div class="col-lg-5 col-12 mx-auto mt-5">
@@ -458,17 +454,14 @@ include('admin/includes/config.php');
         </section>
 
         <section class="google-map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1651.4809337784386!2d76.41135254302985!3d10.106800236967418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08091da73b88a7%3A0x84353e2c4abe5459!2sMETAVALLEY%20TBI!5e0!3m2!1sen!2sin!4v1667887733650!5m2!1sen!2sin"
-                class="map-iframe" width="100%" height="400" style="border:0;" allowfullscreen=""
-                loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1651.4809337784386!2d76.41135254302985!3d10.106800236967418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08091da73b88a7%3A0x84353e2c4abe5459!2sMETAVALLEY%20TBI!5e0!3m2!1sen!2sin!4v1667887733650!5m2!1sen!2sin" class="map-iframe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
 
     </main>
 
     <footer class="site-footer">
         <div class="container py-5">
-            <div class="row g-5">
+            <div class="row">
                 <div class="col-lg-4 col-md-4">
                     <h5 class="text-white">MetaValley</h5>
                     <p class="text-white text-justify">METAVALLEY TBI is an umbrella for encouraging
@@ -504,7 +497,7 @@ include('admin/includes/config.php');
                     </br>
                     <a href="startup.php" class="custom-link mt-3">
                         <i class="bi bi-arrow-right-short me-2"></i>
-                        Start UP
+                        Start-Up
                     </a>
                     </br>
                     <a href="index.php#contact" class="custom-link mt-3">
@@ -557,14 +550,12 @@ include('admin/includes/config.php');
                         </li>
 
                         <li>
-                            <a href="https://www.linkedin.com/company/metavalleytbi"
-                                class="social-icon-link bi-linkedin"></a>
+                            <a href="https://www.linkedin.com/company/metavalleytbi" class="social-icon-link bi-linkedin"></a>
                         </li>
                     </ul>
                 </div>
                 <div class="text-center">
-                    <a href="#">MetaValley TBI</a>, © All Right Reserved. Designed by <a href="https://infiniio.co.in/"
-                        target="_blank">Infinio Technology Solutions</a>
+                    <a href="#">MetaValley TBI</a>, © All Right Reserved. Designed by <a href="https://infiniio.co.in/" target="_blank">Infinio Technology Solutions</a>
                 </div>
 
             </div>

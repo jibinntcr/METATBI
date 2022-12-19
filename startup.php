@@ -60,10 +60,10 @@
                             <a class="nav-link" href="news-events.php?page=<?php echo 'News' ?>">News</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="startup.php">StartUp</a>
+                            <a class="nav-link" href="startup.php">Start-Up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact Us</a>
+                            <a class="nav-link" href="index.php#contact">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -211,7 +211,7 @@
                     </br>
                     <a href="startup.php" class="custom-link mt-3">
                         <i class="bi bi-arrow-right-short me-2"></i>
-                        Start UP
+                        Start-Up
                     </a>
                     </br>
                     <a href="index.php#contact" class="custom-link mt-3">
