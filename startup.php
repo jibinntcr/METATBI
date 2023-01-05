@@ -164,6 +164,27 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/BL.png" class="img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a class="news-title-link">Breakthrough Learning</a>
+                                    </h5>
+                                    <a target="_blank" href="https://infinio.co.in/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.infinio.co.in
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </div>
