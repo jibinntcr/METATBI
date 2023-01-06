@@ -298,7 +298,7 @@ include('admin/includes/config.php');
                                     </a>
                                 </div>
                                 <div class="carousel-item">
-                                    <a target="_blank" href="https://credize.com/">
+                                    <a target="_blank" href="">
                                         <img src="images/people/BL.png" class="img-fluid team-image" alt="">
                                     </a>
                                 </div>

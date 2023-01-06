@@ -177,9 +177,8 @@
                                     <h5 class="news-title">
                                         <a class="news-title-link">Breakthrough Learning</a>
                                     </h5>
-                                    <a target="_blank" href="https://infinio.co.in/" target="_blank"
-                                        class="custom-link mt-3 mb-5">
-                                        <i class="bi bi-globe me-2"></i>www.infinio.co.in
+                                    <a target="_blank" href="" target="_blank" class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>
                                     </a>
                                 </div>
                             </div>
