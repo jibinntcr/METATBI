@@ -298,8 +298,38 @@ include('admin/includes/config.php');
                                     </a>
                                 </div>
                                 <div class="carousel-item">
-                                    <a target="_blank" href="">
+                                    <a target="_blank" href="http://www.breakthroughlearning.in/">
                                         <img src="images/people/BL.png" class="img-fluid team-image" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a target="_blank" href="https://croniox.com/">
+                                        <img src="images/people/croniox.jpg" class="img-fluid team-image" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a target="_blank" href="https://zamorinandgama.com/">
+                                        <img src="images/people/zg.jpg" class="img-fluid team-image" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a target="_blank" href="https://theapothecary.co.in/">
+                                        <img src="images/people/theapothecary.jpg" class="img-fluid team-image" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a target="_blank" href="https://capsulesession.com/">
+                                        <img src="images/people/starting.jpg" class="img-fluid team-image" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a target="_blank" href="http://www.equalsoft.co.in/">
+                                        <img src="images/people/eqs.jpg" class="img-fluid team-image" alt="">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a target="_blank" href="https://neombiz.in/">
+                                        <img src="images/people/neom.jpg" class="img-fluid team-image" alt="">
                                     </a>
                                 </div>
                             </div>

@@ -93,8 +93,7 @@
                                     </h5>
                                     <a target="_blank" href="https://finderfitsports.com/" target="_blank"
                                         class="custom-link mt-3 mb-5">
-                                        <i class="bi bi-globe me-2"></i>www.finderfitsports.com
-                                    </a>
+                                        <i class="bi bi-globe me-2"></i>www.finderfitsports.com</a>
                                 </div>
                             </div>
                         </div>
@@ -115,8 +114,7 @@
                                     </h5>
                                     <a target="_blank" href="https://credize.com/" target="_blank"
                                         class="custom-link mt-3 mb-5">
-                                        <i class="bi bi-globe me-2"></i>www.credize.com
-                                    </a>
+                                        <i class="bi bi-globe me-2"></i>www.credize.com</a>
                                 </div>
                             </div>
                         </div>
@@ -136,8 +134,7 @@
                                     </h5>
                                     <a target="_blank" href="https://monzhalabs.tech/" target="_blank"
                                         class="custom-link mt-3 mb-5">
-                                        <i class="bi bi-globe me-2"></i>www.monzhalabs.tech
-                                    </a>
+                                        <i class="bi bi-globe me-2"></i>www.monzhalabs.tech</a>
                                 </div>
                             </div>
                         </div>
@@ -158,8 +155,7 @@
                                     </h5>
                                     <a target="_blank" href="https://infinio.co.in/" target="_blank"
                                         class="custom-link mt-3 mb-5">
-                                        <i class="bi bi-globe me-2"></i>www.infinio.co.in
-                                    </a>
+                                        <i class="bi bi-globe me-2"></i>www.infinio.co.in</a>
                                 </div>
                             </div>
                         </div>
@@ -177,9 +173,129 @@
                                     <h5 class="news-title">
                                         <a class="news-title-link">Breakthrough Learning</a>
                                     </h5>
-                                    <a target="_blank" href="" target="_blank" class="custom-link mt-3 mb-5">
-                                        <i class="bi bi-globe me-2"></i>
-                                    </a>
+                                    <a target="_blank" href="http://www.breakthroughlearning.in/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.breakthroughlearning.in</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/croniox.jpg" class=" img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a class="news-title-link">Croniox Private Limited</a>
+                                    </h5>
+                                    <a target="_blank" href="https://croniox.com/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.croniox.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/zg.jpg" class=" img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a class="news-title-link">Zamorin &amp; Gama</a>
+                                    </h5>
+                                    <a target="_blank" href="https://zamorinandgama.com/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.zamorinandgama.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/theapothecary.jpg" class=" img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a class="news-title-link">Apothecary Medical Services</a>
+                                    </h5>
+                                    <a target="_blank" href="https://theapothecary.co.in/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.theapothecary.co.in</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/starting.jpg" class=" img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a class="news-title-link">StartingTrouble</a>
+                                    </h5>
+                                    <a target="_blank" href="https://capsulesession.com/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.capsulesession.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/eqs.jpg" class=" img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a class="news-title-link">Equal Soft</a>
+                                    </h5>
+                                    <a target="_blank" href="http://www.equalsoft.co.in/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.equalsoft.co.in</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/neom.jpg" class=" img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a class="news-title-link">Neom Building Solutions</a>
+                                    </h5>
+                                    <a target="_blank" href="https://neombiz.in/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.neombiz.in</a>
                                 </div>
                             </div>
                         </div>
