@@ -332,6 +332,11 @@ include('admin/includes/config.php');
                                         <img src="images/people/neom.jpg" class="img-fluid team-image" alt="">
                                     </a>
                                 </div>
+                                <div class="carousel-item">
+                                    <a target="_blank" href="https://newgloryortho.com/">
+                                        <img src="images/people/glorified.jpg" class="img-fluid team-image" alt="">
+                                    </a>
+                                </div>
                             </div>
 
                             <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"

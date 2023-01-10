@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Start UP | MetaValley TBI</title>
+    <title>Our Members | MetaValley TBI</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,7 +75,7 @@
                 <div class="row">
 
                     <div class="col-12">
-                        <h2 class="mb-5 text-center" data-aos="fade-up">StartUp</h2>
+                        <h2 class="mb-5 text-center" data-aos="fade-up">Our Members</h2>
                     </div>
                     <div class="col-lg-6 col-12">
                         <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
@@ -296,6 +296,26 @@
                                     <a target="_blank" href="https://neombiz.in/" target="_blank"
                                         class="custom-link mt-3 mb-5">
                                         <i class="bi bi-globe me-2"></i>www.neombiz.in</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/glorified.jpg" class=" img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a class="news-title-link">Glorified ORTHO</a>
+                                    </h5>
+                                    <a target="_blank" href="https://newgloryortho.com/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.newgloryortho.com</a>
                                 </div>
                             </div>
                         </div>
