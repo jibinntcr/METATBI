@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $subject = "Enquiry From $name";
+    $subject = "Metavalley TBI | Enquiry From $name";
     $message = $_POST['message'];
     $output = "<html>
 <body>
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
     $mail->Port = 587;
     //Recipients
     $mail->setFrom('contactusinfinio@gmail.com', 'Metavalley TBI'); //SENDER MAIL ID
-    $mail->addAddress('jerryaksa97@gmail.com'); //RECIVER MAIL ID
+    $mail->addAddress('info@infinio.co.in'); //RECIVER MAIL ID
     //Content
     $mail->isHTML(true);
     $mail->Subject = $subject;
