@@ -320,6 +320,26 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
+
+                                <a class="news-image-hover news-image-hover-primary">
+                                    <img src="images/people/keralavibes.png" class=" img-fluid news-image" alt="">
+                                </a>
+                            </div>
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <a class="news-title-link">Kerala Vibes</a>
+                                    </h5>
+                                    <a target="_blank" href="https://www.keralavibes.com/" target="_blank"
+                                        class="custom-link mt-3 mb-5">
+                                        <i class="bi bi-globe me-2"></i>www.keralavibes.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </div>

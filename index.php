@@ -337,6 +337,11 @@ include('admin/includes/config.php');
                                         <img src="images/people/glorified.jpg" class="img-fluid team-image" alt="">
                                     </a>
                                 </div>
+                                <div class="carousel-item">
+                                    <a target="_blank" href="https://www.keralavibes.com/">
+                                        <img src="images/people/keralavibes.png" class="img-fluid team-image" alt="">
+                                    </a>
+                                </div>
                             </div>
 
                             <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel"
