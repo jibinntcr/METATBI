@@ -23,7 +23,8 @@ $page = $_GET['page'];
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap"
+        rel="stylesheet">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.css" rel="stylesheet">
@@ -40,42 +41,7 @@ $page = $_GET['page'];
 <body>
 
     <main>
-        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index.php">
-                    <img class="logo-size" src="images/portfolio/logo.png">
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.php">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="news-events.php?page=<?php echo 'Events' ?>">Events</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="news-events.php?page=<?php echo 'News' ?>">News</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="startup.php">Start-Up</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <?php include('partilas/header.php') ?>
 
 
 
@@ -98,36 +64,38 @@ $page = $_GET['page'];
                         foreach ($results as $result) {
                     ?>
 
-                            <div class="col-lg-6 col-12">
-                                <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
-                                    <div class="news-top w-100">
+                    <div class="col-lg-6 col-12">
+                        <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
+                            <div class="news-top w-100">
 
-                                        <a href="news-detail.html" class="news-image-hover news-image-hover-primary">
-                                            <img src="admin/uploads/<?php echo $result->image ?>" class="img-fluid news-image" alt="">
-                                        </a>
+                                <a href="news-detail.html" class="news-image-hover news-image-hover-primary">
+                                    <img src="admin/uploads/<?php echo $result->image ?>" class="img-fluid news-image"
+                                        alt="">
+                                </a>
 
-                                        <div class="news-category bg-primary text-white"><?php echo $page ?></div>
-                                    </div>
+                                <div class="news-category bg-primary text-white"><?php echo $page ?></div>
+                            </div>
 
-                                    <div class="news-bottom w-100">
-                                        <div class="news-text-info">
-                                            <h5 class="news-title">
-                                                <?php
+                            <div class="news-bottom w-100">
+                                <div class="news-text-info">
+                                    <h5 class="news-title">
+                                        <?php
                                                 $heading =  substr($result->heading, 0, 65);
                                                 ?>
-                                                <a onclick="location.href = 'news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>';" class="news-title-link"><?php echo  $heading ?>...</a>
-                                            </h5>
+                                        <a onclick="location.href = 'news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>';"
+                                            class="news-title-link"><?php echo  $heading ?>...</a>
+                                    </h5>
 
-                                            <div class="d-flex flex-wrap">
-                                                <?php
+                                    <div class="d-flex flex-wrap">
+                                        <?php
                                                 $date = date_create($result->date);
                                                 ?>
-                                                <span class="text-muted"><?php echo date_format($date, "d/m/Y"); ?></span>
-                                            </div>
-                                        </div>
+                                        <span class="text-muted"><?php echo date_format($date, "d/m/Y"); ?></span>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
                     <?php
                         }
                     } ?>
@@ -237,12 +205,14 @@ $page = $_GET['page'];
                         </li>
 
                         <li>
-                            <a href="https://www.linkedin.com/company/metavalleytbi" class="social-icon-link bi-linkedin"></a>
+                            <a href="https://www.linkedin.com/company/metavalleytbi"
+                                class="social-icon-link bi-linkedin"></a>
                         </li>
                     </ul>
                 </div>
                 <div class="text-center">
-                    <a href="#">MetaValley TBI</a>, © All Right Reserved. Designed by <a href="https://infiniio.co.in/" target="_blank">Infinio Technology Solutions</a>
+                    <a href="#">MetaValley TBI</a>, © All Right Reserved. Designed by <a href="https://infiniio.co.in/"
+                        target="_blank">Infinio Technology Solutions</a>
                 </div>
 
             </div>

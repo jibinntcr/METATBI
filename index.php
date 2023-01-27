@@ -188,14 +188,18 @@ include('admin/includes/config.php');
                     <div class="col-6">
                         <h2 class="mb-3" data-aos="fade-up">MISSION</h2>
                         <div class="col-12 mt-lg-3 mb-lg-5">
-                            <ul class="justify-para" data-aos="fade-up" data-aos-delay="800">
+                            <p class="me-4 justify-para" data-aos="fade-up" data-aos-delay="300">Promote innovation and
+                                entrepreneurship among students, and the public
+                                for establishing a technology-based business to meet the socio-economic growth of the
+                                community around.</p>
+                            <!-- <ul class="justify-para" data-aos="fade-up" data-aos-delay="800">
                                 <li class="mb-3 mission" data-aos="fade-up">Assets to create technology-based
                                     incubators.</li>
                                 <li class="mb-3 mission" data-aos="fade-up">Contribute to the creation of high-value
                                     employment and services.</li>
                                 <li class="mb-3 mission" data-aos="fade-up">Introduction of Entrepreneurial culture to
                                     the students and the common people.</li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
 
@@ -423,7 +427,7 @@ include('admin/includes/config.php');
                 </div>
             </div>
         </section>
-        <div class="container mb-5 pb-lg-5">
+        <div class="container mb-5 pb-lg-5" id="contact">
             <div class="row">
                 <div class="col-12">
                     <h2 class="mb-5 text-center" data-aos="fade-up">Contact</h2>
