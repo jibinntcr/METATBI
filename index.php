@@ -364,7 +364,7 @@ include('admin/includes/config.php');
             </div>
         </section>
 
-        <section class="news section-padding" id="news">
+        <section class="news section-padding" id="news" style="background:white;">
             <div class="container">
                 <div class="row">
 
@@ -459,8 +459,49 @@ include('admin/includes/config.php');
                 </div>
             </div>
         </section>
+        <div class="container mb-5 pb-lg-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-5 text-center" data-aos="fade-up">Contact</h2>
+                </div>
+                <div class="col-lg-6 col-auto mb-lg-5 mb-3">
+                    <!-- <h5 class="">Contact</h5> -->
+                    <p>
+                        <i class="bi-geo-alt-fill me-2"></i>
+                        Metavalley Technology Business Incubator</br>
+                        MES College Marampally</br>
+                        Marampally P O, North Vazhakulam, Aluva</br>
+                        Ernakulam (Dist), Kerala, India</br>
+                        Pincode - 683 105
 
-        <section class="contact section-padding" id="contact">
+                    </p>
+                    <a href="mailto:info@metavalleytbi.com" class="custom-link mt-3">
+                        <i class="bi bi-envelope me-2"></i>
+                        info@metavalleytbi.com
+                    </a>
+                    </br>
+                    <a href="tel:+91-98472 39388" class="custom-link mt-3">
+                        <i class="bi bi-telephone me-2"></i>
+                        +91 - 98472 39388
+                    </a>
+                    </br>
+                    <a href="tel:+91-8281550638" class="custom-link mt-3">
+                        <i class="bi bi-telephone me-2"></i>
+                        +91 - 82815 50638
+                    </a>
+                    </br>
+
+                </div>
+                <div class="col-lg-6 col-12 mt-lg-3 mb-lg-5">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1651.4809337784386!2d76.41135254302985!3d10.106800236967418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08091da73b88a7%3A0x84353e2c4abe5459!2sMETAVALLEY%20TBI!5e0!3m2!1sen!2sin!4v1667887733650!5m2!1sen!2sin"
+                        class="map-iframe" width="100%" height="400" style="border:0;" allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- <section class="contact section-padding" id="contact">
             <div class="container">
                 <div class="row">
 
@@ -519,14 +560,14 @@ include('admin/includes/config.php');
 
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section class="google-map">
+        <!-- <section class="google-map">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1651.4809337784386!2d76.41135254302985!3d10.106800236967418!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08091da73b88a7%3A0x84353e2c4abe5459!2sMETAVALLEY%20TBI!5e0!3m2!1sen!2sin!4v1667887733650!5m2!1sen!2sin"
                 class="map-iframe" width="100%" height="400" style="border:0;" allowfullscreen=""
                 loading="lazy"></iframe>
-        </section>
+        </section> -->
 
     </main>
 
