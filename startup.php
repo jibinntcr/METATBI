@@ -331,7 +331,7 @@
                             <div class="news-bottom w-100">
                                 <div class="news-text-info">
                                     <h5 class="news-title">
-                                        <a class="news-title-link">Kerala Vibes</a>
+                                        <a class="news-title-link">Artz Team</a>
                                     </h5>
                                     <a target="_blank" href="https://www.keralavibes.com/" target="_blank"
                                         class="custom-link mt-3 mb-5">
