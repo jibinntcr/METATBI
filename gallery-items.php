@@ -1,5 +1,5 @@
 <?php
-include('admin/includes/config.php');
+include('includes/config.php');
 $id = $_GET['id'];
 $sql = "SELECT * from gallerimages where galleryID ='$id' ";
 $query = $dbh->prepare($sql);
@@ -74,8 +74,8 @@ if ($query->rowCount() > 0) {
                     ?>
                 <div class="grid_4">
                     <div class="box">
-                        <a href="admin/pages/<?php echo $result->image ?>" class="gall_item"><img
-                                src="admin/pages/<?php echo $result->image ?>" alt=""><span></span></a>
+                        <a href="<?php echo $result->image ?>" class="gall_item"><img src="<?php echo $result->image ?>"
+                                alt=""><span></span></a>
                     </div>
                 </div>
                 <?php }

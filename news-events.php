@@ -1,6 +1,6 @@
 <?php
 error_reporting(0);
-include('admin/includes/config.php');
+include('includes/config.php');
 $page = $_GET['page'];
 ?>
 
@@ -68,9 +68,9 @@ $page = $_GET['page'];
                         <div class="news-thumb news-two-column d-flex flex-column flex-lg-row" data-aos="fade-up">
                             <div class="news-top w-100">
 
-                                <a href="news-detail.html" class="news-image-hover news-image-hover-primary">
-                                    <img src="admin/uploads/<?php echo $result->image ?>" class="img-fluid news-image"
-                                        alt="">
+                                <a href="news-and-events.php?heading=<?php echo $result->heading ?>&id=<?php echo   $result->id ?>"
+                                    class="news-image-hover news-image-hover-primary">
+                                    <img src="uploads/<?php echo $result->image ?>" class="img-fluid news-image" alt="">
                                 </a>
 
                                 <div class="news-category bg-primary text-white"><?php echo $page ?></div>

@@ -4,8 +4,7 @@
             <img class="logo-size" src="images/portfolio/logo.png">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -16,7 +15,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="index.php#about">About</a>
                 </li>
 
                 <li class="nav-item">
@@ -32,7 +31,7 @@
                     <a class="nav-link" href="gallery.php">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact Us</a>
+                    <a class="nav-link" href="index.php#contact">Contact Us</a>
                 </li>
             </ul>
         </div>

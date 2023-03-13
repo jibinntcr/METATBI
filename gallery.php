@@ -1,5 +1,5 @@
 <?php
-include('admin/includes/config.php');
+include('includes/config.php');
 ?>
 
 <!DOCTYPE html>
@@ -89,8 +89,7 @@ include('admin/includes/config.php');
                         <div class="col-lg-3 col-md-12 wow zoomIn" data-wow-delay="0.3s">
                             <a class="position-relative d-block overflow-hidden"
                                 href="gallery-items.php?id=<?php echo   $result->id ?>" target="_blank">
-                                <img class="img-fluid" src="admin/pages/uploads/<?php echo $result->thumbnail ?>"
-                                    alt="">
+                                <img class="img-fluid" src="uploads/<?php echo $result->thumbnail ?>" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
                                     style="margin: 1px;">
                                     <h5 class="m-0"><?php echo $result->name ?></h5>
